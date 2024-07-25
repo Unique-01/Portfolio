@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-scroll";
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -13,18 +15,34 @@ const Navbar = () => {
                 <div className=" container mx-auto flex justify-between items-center ">
                     <div className="text-white text-xl">Unic</div>
                     <div className="hidden md:flex space-x-4 ">
-                        <a href="#home" className="text-gray-300 hover:text-white">
+                        <Link
+                            to="home"
+                            smooth={true}
+                            duration={500}
+                            className="text-gray-300 hover:text-white cursor-pointer">
                             Home
-                        </a>
-                        <a href="#about" className="text-gray-300 hover:text-white">
+                        </Link>
+                        <Link
+                            to="about"
+                            smooth={true}
+                            duration={500}
+                            className="text-gray-300 hover:text-white cursor-pointer">
                             About
-                        </a>
-                        <a href=" " className="text-gray-300 hover:text-white">
-                            Services
-                        </a>
-                        <a href=" " className="text-gray-300 hover:text-white">
+                        </Link>
+                        <Link
+                            to="skills"
+                            smooth={true}
+                            duration={500}
+                            className="text-gray-300 hover:text-white cursor-pointer">
+                            Skills
+                        </Link>
+                        <Link
+                            to="contact"
+                            smooth={true}
+                            duration={500}
+                            className="text-gray-300 hover:text-white cursor-pointer">
                             Contact
-                        </a>
+                        </Link>
                     </div>
                     <div className="md:hidden">
                         <button
@@ -44,26 +62,34 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className={`${isOpen ? "block" : "hidden"} md:hidden`}>
-                    <a
-                        href="#home"
-                        className="block text-gray-300 hover:text-white px-4 py-2">
+                    <Link
+                        to="home"
+                        smooth={true}
+                        duration={500}
+                        className=" block text-gray-300 hover:text-white cursor-pointer">
                         Home
-                    </a>
-                    <a
-                        href="#about"
-                        className="block text-gray-300 hover:text-white px-4 py-2">
+                    </Link>
+                    <Link
+                        to="about"
+                        smooth={true}
+                        duration={500}
+                        className="block text-gray-300 hover:text-white cursor-pointer">
                         About
-                    </a>
-                    <a
-                        href=" "
-                        className="block text-gray-300 hover:text-white px-4 py-2">
-                        Services
-                    </a>
-                    <a
-                        href=" "
-                        className="block text-gray-300 hover:text-white px-4 py-2">
+                    </Link>
+                    <Link
+                        to="skills"
+                        smooth={true}
+                        duration={500}
+                        className=" block text-gray-300 hover:text-white cursor-pointer">
+                        Skills
+                    </Link>
+                    <Link
+                        to="contact"
+                        smooth={true}
+                        duration={500}
+                        className="block text-gray-300 hover:text-white cursor-pointer">
                         Contact
-                    </a>
+                    </Link>
                 </div>
             </nav>
         </>
