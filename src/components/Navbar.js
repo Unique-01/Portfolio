@@ -13,7 +13,15 @@ const Navbar = () => {
         <>
             <nav className="fixed w-full p-4 shadow-lg bg-indigo-950">
                 <div className=" container mx-auto flex justify-between items-center ">
-                    <div className="text-white text-xl">Unic</div>
+                    <div className="text-white text-xl">
+                        <Link
+                            to="home"
+                            smooth={true}
+                            duration={500}
+                            className="cursor-pointer">
+                            Unic
+                        </Link>
+                    </div>
                     <div className="hidden md:flex space-x-4 ">
                         <Link
                             to="home"
@@ -35,6 +43,13 @@ const Navbar = () => {
                             duration={500}
                             className="text-gray-300 hover:text-white cursor-pointer">
                             Skills
+                        </Link>
+                        <Link
+                            to="projects"
+                            smooth={true}
+                            duration={500}
+                            className="text-gray-300 hover:text-white cursor-pointer">
+                            Projects
                         </Link>
                         <Link
                             to="contact"
@@ -82,6 +97,13 @@ const Navbar = () => {
                         duration={500}
                         className=" block text-gray-300 hover:text-white cursor-pointer">
                         Skills
+                    </Link>
+                    <Link
+                        to="projects"
+                        smooth={true}
+                        duration={500}
+                        className=" block text-gray-300 hover:text-white cursor-pointer">
+                        Projects
                     </Link>
                     <Link
                         to="contact"

@@ -4,8 +4,8 @@ const Home = () => {
             <div
                 className="grid md:grid-cols-2 items-center justify-center gap-40  mx-5 px-3 min-h-screen"
                 id="home">
-                <div className="px-5 pt-20">
-                    <p className="text-blue-500 text-xl">Hi,</p>
+                <div className="px-5 pt-20 text-center md:text-left">
+                    <p className="text-blue-500 text-xl hidden md:block">Hi,</p>
                     <h1 className="text-white md:text-7xl text-4xl font-bold font-serif">
                         I'M ABDULAZEEZ, SAHEED OLAWALE
                     </h1>
