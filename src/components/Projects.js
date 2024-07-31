@@ -1,48 +1,28 @@
-// App.jsx or any other component
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import env from "react-dotenv";
+// import 'dotenv/config'
+// require("dotenv").config()
+
+const API_URL = env.API_URL;
+console.log(API_URL);
 
 const Projects = () => {
-    const projects = [
-        {
-            image: "/assets/program.svg",
-            name: "Project 1",
-            description: "This is a description for Project 1.",
-            link: "https://example.com/project1",
-        },
-        {
-            image: "/assets/program.svg",
-            name: "Project 1",
-            description: "This is a description for Project 1.",
-            link: "https://example.com/project1",
-        },
-        {
-            image: "/assets/program.svg",
-            name: "Project 1",
-            description: "This is a description for Project 1.",
-            link: "https://example.com/project1",
-        },
-        {
-            image: "/assets/program.svg",
-            name: "Project 1",
-            description: "This is a description for Project 1.",
-            link: "https://example.com/project1",
-        },
-        {
-            image: "/assets/program.svg",
-            name: "Project 1",
-            description: "This is a description for Project 1.",
-            link: "https://example.com/project1",
-        },
-        {
-            image: "/assets/skills/python.svg",
-            name: "Project 2",
-            description:
-                "This is a description for Project 2.This is a description for Project 2.This is a description for Project 2.This is a description for Project 2.This is a description for Project 2.",
-            link: "https://example.com/project2",
-        },
-    ];
+    const [projects, setProjects] = useState([]);
 
+    useEffect(() => {
+        const fetchProjects = async () => {
+            try {
+                const response = await axios.get(`${API_URL}/projects`);
+                setProjects(response.data);
+            } catch (error) {
+                console.log(error);
+            }
+        };
+        fetchProjects();
+    }, []);
     return (
         <>
             <div
