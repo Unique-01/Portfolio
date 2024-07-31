@@ -1,23 +1,20 @@
 import "./App.css";
-import Home from "./components/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
+import HomePage from "./pages/HomePage";
+import AdminPage from "./pages/Admin";
+import Page404 from "./pages/Page404";
 
 function App() {
     return (
-        <div className="bg-indigo-950 min-h-screen">
+        <BrowserRouter>
             <Navbar />
-            <div className="container mx-auto">
-                <Home />
-                <About />
-                <Skills />
-                <Projects />
-                <Contact />
-            </div>
-        </div>
+            <Routes>
+                <Route path="/" exact element={<HomePage />} />
+                <Route path="/myPortfolio" element={<AdminPage />} />
+                <Route path="/*" element={<Page404 />} />
+            </Routes>
+        </BrowserRouter>
     );
 }
 
