@@ -1,13 +1,8 @@
-import React from "react";
 import ProjectCard from "./ProjectCard";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import env from "react-dotenv";
-// import 'dotenv/config'
-// require("dotenv").config()
 
-const API_URL = env.API_URL;
-console.log(API_URL);
+const API_URL = process.env.REACT_APP_API_URL;
 
 const Projects = () => {
     const [projects, setProjects] = useState([]);

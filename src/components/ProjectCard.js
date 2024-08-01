@@ -1,9 +1,9 @@
-import env from "react-dotenv";
+const API_URL = process.env.REACT_APP_API_URL;
 const ProjectCard = ({ image, name, description, link }) => {
     return (
         <div className="relative w-64 h-64 md:w-52 md:h-52 lg:w-64 lg:h-64 overflow-hidden rounded-lg shadow-lg group">
             <img
-                src={`${env.API_URL}${image}`}
+                src={`${API_URL}${image}`}
                 alt={name}
                 className="w-full h-full object-cover group-hover:opacity-30 transition-opacity duration-300"
             />

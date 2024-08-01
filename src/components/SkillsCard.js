@@ -1,6 +1,6 @@
 const SkillsCard = ({ image, name }) => {
     return (
-        <div className="flex flex-col items-center shadow-2xl rounded-lg w-32 md:w-40 lg:w-48 lg:h-48  p-4 m-4 transition-transform transform hover:scale-110">
+        <div className="flex flex-col items-center shadow-2xl rounded-lg w-32 md:w-40 lg:w-48 lg:h-48  p-4 m-4 hover:scale-110">
             <img
                 src={image}
                 alt={name}
