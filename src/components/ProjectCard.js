@@ -1,7 +1,7 @@
 const API_URL = process.env.REACT_APP_API_URL;
 const ProjectCard = ({ image, name, description, link }) => {
     return (
-        <div className="relative w-64 h-64 md:w-52 md:h-52 lg:w-64 lg:h-64 overflow-hidden rounded-lg shadow-lg group">
+        <div className="relative w-64 h-64 md:w-52 md:h-52 lg:w-72 lg:h-72 overflow-hidden rounded-lg shadow-lg group">
             <img
                 src={`${API_URL}${image}`}
                 alt={name}
