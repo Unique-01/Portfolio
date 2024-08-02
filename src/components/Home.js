@@ -18,6 +18,11 @@ const Home = () => {
                         building robust and scalable APIs, I am now expanding my
                         skill set to include frontend development.
                     </p>
+                    <div className="mt-4">
+                    <a href="/saheedResume.pdf" download={true} className="bg-gray-300 hover:bg-white transition font-bold py-3 px-4 rounded text-blue-800">
+                        Get Resume
+                    </a>
+                    </div>
                 </div>
                 <div>
                     <img
