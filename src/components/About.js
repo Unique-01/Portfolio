@@ -45,7 +45,7 @@ const About = () => {
                     About
                 </h1>
                 <div className="md:px-56 px-10 ">
-                    <p className="text-blue-200 text-xl">
+                    <p className="text-blue-200 text-lg">
                         I am a results-driven full-stack developer with a
                         passion for crafting innovative web applications. My
                         expertise in Django, Node.js, Express.js, Flask, and
